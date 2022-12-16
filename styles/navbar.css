@@ -1,0 +1,23 @@
+.navbar {
+    overflow: hidden;
+    background-color: darkred;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%
+}
+
+.navbaroption {
+    height: 100%;
+    padding: 1.5vh
+}
+
+.navbaroption:hover {
+    background-color: crimson;
+    box-shadow: inset 0 -10px 0 0 navy;
+    transition: 0.35s;
+}
+
+.navbaroptionselected {
+    font-weight: bold;
+    background-color: red;
+}
