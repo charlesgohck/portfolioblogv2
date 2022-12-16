@@ -1,0 +1,22 @@
+.elementfadeinleft {
+    animation: fadeinleft ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.animationdelaythreeseconds {
+    animation-delay: 3s;
+}
+
+.animationdelaysixseconds {
+    animation-delay: 6s;
+}
+
+@keyframes fadeinleft {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}

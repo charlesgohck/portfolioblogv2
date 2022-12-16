@@ -34,3 +34,27 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.maincomponent {
+    margin-top: 5vh
+}
+
+.sectionelement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh
+}
+
+.sectionsubelement {
+    padding: 1vh
+}
+
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+p {
+    font-size: large
+}
