@@ -1,10 +1,13 @@
 .navbar {
     overflow: hidden;
-    background-color: darkred;
+    background-color: black;
     display: flex;
     justify-content: flex-start;
     height: 5vh;
     color: white;
+    position: fixed;
+    top: 0;
+    width: 100%
 }
 
 .navbaroption {
@@ -16,14 +19,14 @@
 }
 
 .navbaroption:hover {
-    background-color: crimson;
-    box-shadow: inset 0 -0.5vh 0 0 navy;
+    background-color: darkslategray;
+    box-shadow: inset 0 -0.5vh 0 0 whitesmoke;
     transition: 0.35s;
 }
 
 .navbaroptionselected {
     font-weight: bold;
-    background-color: navy;
+    background-color: darkslategray;
 }
 
 .faviconlogo {
