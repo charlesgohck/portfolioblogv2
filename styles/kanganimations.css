@@ -1,15 +1,7 @@
 .elementfadeinleft {
-    animation: fadeinleft ease 3s;
+    animation: fadeinleft ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-
-.animationdelaythreeseconds {
-    animation-delay: 3s;
-}
-
-.animationdelaysixseconds {
-    animation-delay: 6s;
 }
 
 @keyframes fadeinleft {
@@ -19,4 +11,18 @@
     100% {
         opacity: 1; 
     }
+}
+
+.fadeinsection {
+    opacity: 0;
+    transform: translateX(30vh);
+    visibility: hidde;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fadeinsection.isvisible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
 }
