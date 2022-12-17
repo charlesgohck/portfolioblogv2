@@ -5,10 +5,13 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter'
 import { sortByDate } from "../utils";
+import FadeInSection from "../components/FadeInSection";
+import { InferGetStaticPropsType } from "next/types";
+import PostLinkElement from "../components/PostLinkElement";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Blog() {
+export default function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
         <>
             <Head>
@@ -18,7 +21,21 @@ export default function Blog() {
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>
             <main>
-                Hello World
+                <FadeInSection>
+                    <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Blog</h1>
+                    <div className="sectionelement">
+                        <div className="blogpostlist">
+                            { posts.map(
+                                post => <PostLinkElement 
+                                    title={post.frontmatter.title} 
+                                    date={post.frontmatter.date} 
+                                    excerpt={post.frontmatter.excerpt} 
+                                    imagePath={post.frontmatter.cover_image}
+                                />
+                            ) }
+                        </div>
+                    </div>
+                </FadeInSection>
             </main>
         </>
     )
