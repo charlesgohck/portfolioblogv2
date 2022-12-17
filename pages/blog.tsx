@@ -26,7 +26,8 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
                     <div className="sectionelement">
                         <div className="blogpostlist">
                             { posts.map(
-                                post => <PostLinkElement 
+                                post => <PostLinkElement
+                                    slug={post.frontmatter.slug}
                                     title={post.frontmatter.title} 
                                     date={post.frontmatter.date} 
                                     excerpt={post.frontmatter.excerpt} 

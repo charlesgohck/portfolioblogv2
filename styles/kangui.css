@@ -73,19 +73,21 @@
 }
 
 .blogpostlinkelementcontainer {
-    padding: 2vh;
     margin: 1vh;
     overflow-wrap: break-word;
     background-color: white;
+    min-width: 20%;
+    max-width: 30%;
 }
 
 .blogpostlinkelementcontainer:hover {
-    padding: 2vh;
     margin: 1vh;
     overflow-wrap: break-word;
     background-color: white;
     box-shadow: 0.5vh 0.75vh 0.5vh rgb(0 0 0 / 20%), 0.5vh 0.75vh 0.5vh rgb(0 0 0 / 20%);
-    transition-duration: 0.5s
+    transition-duration: 0.5s;
+    min-width: 20%;
+    max-width: 30%;
 }
 
 .blogpostlist {
