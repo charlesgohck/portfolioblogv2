@@ -1,13 +1,13 @@
 .navbar {
-    overflow: hidden;
     background-color: black;
     display: flex;
     justify-content: flex-start;
     height: 5vh;
     color: white;
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%
+    z-index: 2;
 }
 
 .navbaroption {
@@ -36,7 +36,8 @@
 }
 
 .maincomponent {
-    margin-top: 5vh
+    margin-top: 5vh;
+    z-index: 1;
 }
 
 .sectionelement {
