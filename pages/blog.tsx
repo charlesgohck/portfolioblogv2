@@ -22,7 +22,7 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
             </Head>
             <main>
                 <FadeInSection>
-                    <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Blog</h1>
+                    <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Recent</h1>
                     <div className="sectionelement">
                         <div className="blogpostlist">
                             { posts.map(
