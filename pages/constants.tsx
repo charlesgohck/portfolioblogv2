@@ -12,7 +12,7 @@ const routerPaths: RouterPath[] = [
         name: "About"
     },
     {
-        path: "/posts",
+        path: "/blog",
         iconClass: "fa-solid fa-book",
         name: "Blog"
     }

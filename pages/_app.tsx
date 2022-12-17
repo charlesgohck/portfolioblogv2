@@ -19,8 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
                 routerPaths.map(
                     routerPath => <Link 
                     key={`linkTo${routerPath.name}`}
-                    className={`navbaroption ${(routerPathName.startsWith(routerPath.path) && routerPathName !== "/") 
-                    || (routerPathName === routerPath.path && routerPathName === "/") ? `navbaroptionselected` : ""}`} 
+                    className={`navbaroption ${
+                        (routerPathName.startsWith(routerPath.path) && routerPath.path !== "/") 
+                        || (routerPathName === routerPath.path && routerPathName === "/") ? `navbaroptionselected` : ""}`} 
                     href={`${routerPath.path}`}><i className={`${routerPath.iconClass}`} />&nbsp;&nbsp;{routerPath.name}</Link>)
             }
         </div>
