@@ -42,8 +42,30 @@
 .sectionelement {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 5vh
+    padding: 5vh;
+    border-bottom: 1px solid lightgray;
+}
+
+.sectionsubelement {
+    padding: 1vh;
+}
+
+.timelineelement {
+    margin-bottom: 0.5vh;
+    border-bottom: 0.1vh solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.timelineelementtextheading {
+    width: 35%;
+}
+
+.timelineelementtextcontent {
+    width: 65%;
 }
 
 .sectionsubelement {
