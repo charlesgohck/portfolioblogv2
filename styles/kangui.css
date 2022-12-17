@@ -55,7 +55,6 @@
 
 .timelineelement {
     margin-bottom: 0.5vh;
-    border-bottom: 0.1vh solid lightgray;
     display: flex;
     justify-content: space-between;
     text-align: left;
