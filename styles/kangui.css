@@ -106,6 +106,21 @@
     padding: 3vh;
 }
 
+@media(max-width: 1500px) {
+    .blogarticle {
+        padding: 0.5vh;
+    }
+
+    .sectionelement {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1vh;
+        border-bottom: 1px solid lightgray;
+    }
+}
+
 h1 {
     font-weight: bold;
     font-size: xx-large;
