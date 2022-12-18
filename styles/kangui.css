@@ -76,6 +76,8 @@
     margin: 1vh;
     overflow-wrap: break-word;
     background-color: white;
+    color: black;
+    opacity: 85%;
     height: 25vh;
     width: 100%
 }
@@ -84,6 +86,8 @@
     margin: 1vh;
     overflow-wrap: break-word;
     background-color: white;
+    opacity: 100%;
+    color: black;
     box-shadow: 0.5vh 0.75vh 0.5vh rgb(0 0 0 / 20%), 0.5vh 0.75vh 0.5vh rgb(0 0 0 / 20%);
     transition-duration: 0.5s;
     height: 25vh
