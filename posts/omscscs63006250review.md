@@ -2,7 +2,7 @@
 title: 'OMSCS: Fall 2023 Course Review'
 date: 'December 18 2022'
 excerpt: 'For the Fall 2023 semester, I took CS6250 Computer Networks and CS6300 Software Development Process. Here is my review for these courses.'
-cover_image: '/assets/images/posts/OMSCS/CS6300CS6250Poster.png'
+cover_image: '/assets/images/posts/OMSCS/CS6300CS6250Poster.jpg'
 ---
 # Review: CS6250 Computer Networks
 ## Objective
