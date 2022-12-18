@@ -94,13 +94,6 @@
     transition-duration: 0.5s;
 }
 
-.blogpostlist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap
-}
-
 .blogarticle {
     padding: 3vh;
 }

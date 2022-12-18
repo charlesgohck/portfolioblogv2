@@ -155,12 +155,6 @@ export default function Home() {
                         </div>
                     </section>
                 </FadeInSection>
-                <FadeInSection>
-                    <section className='sectionelement'>
-                        <i style={{ color: '#0072b1' }} className="sectionsubelement fa-brands fa-linkedin fa-10x" />
-                        <i style={{ color: 'darkred' }} className="sectionsubelement fa-solid fa-at fa-10x" />
-                    </section>
-                </FadeInSection>
             </main>
         </>
     )

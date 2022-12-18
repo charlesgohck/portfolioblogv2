@@ -20,23 +20,22 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>
             <main>
-                <FadeInSection>
-                    <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Recent</h1>
-                    <div className="sectionelement">
-                        <div className="blogpostlist">
-                            { posts.map(
-                                post => <PostLinkElement
-                                    key={`${post.slug} Post Link`}
+                <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Recent</h1>
+                <div className="sectionelement">
+                    {posts.map(
+                        post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
+                            <FadeInSection>
+                                <PostLinkElement
                                     slug={post.slug}
-                                    title={post.frontmatter.title} 
-                                    date={post.frontmatter.date} 
-                                    excerpt={post.frontmatter.excerpt} 
+                                    title={post.frontmatter.title}
+                                    date={post.frontmatter.date}
+                                    excerpt={post.frontmatter.excerpt}
                                     imagePath={post.frontmatter.cover_image}
                                 />
-                            ) }
+                            </FadeInSection>
                         </div>
-                    </div>
-                </FadeInSection>
+                    )}
+                </div>
             </main>
         </>
     )
