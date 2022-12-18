@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     const router = useRouter();
     const routerPathName = router.pathname;
 
-    return <>
+    return <div className='bgcontainer'>
         <div className='navbar' id="topNavBar">
             <img src={"/assets/Logo.svg"} alt={"Charles Goh (长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} />
             {
@@ -37,5 +37,5 @@ export default function App({ Component, pageProps }: AppProps) {
                 <i style={{ color: 'darkred' }} className="sectionsubelement fa-solid fa-at fa-10x" />
             </FadeInSection>    
         </footer>
-    </>
+    </div>
 }
