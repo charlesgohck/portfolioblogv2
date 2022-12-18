@@ -8,7 +8,7 @@ interface PostLinkElementProps {
     imagePath: string,
 }
 
-export default function (props: PostLinkElementProps) {
+export default function PostLinkElement(props: PostLinkElementProps) {
     return <div className="blogpostlinkelementcontainer">
         <Link href={`/blog/${props.slug}`} style={{ height: "100%" }}>
             <div style={{ display: "flex", justifyContent: "flex-start", height: "100%" }}>
