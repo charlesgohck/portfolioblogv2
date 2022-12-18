@@ -44,12 +44,14 @@ export default function BlogPage(props: BlogPageProps) {
         <main>
             <section>
                 <article className="blogarticle">
-                    <FadeInSection>
-                        <h1>{props.frontmatter.title}</h1>
-                    </FadeInSection>
-                    <FadeInSection>
-                        <h2>{props.frontmatter.date}</h2>
-                    </FadeInSection>
+                    <div style={{ textAlign: 'center' }}>
+                        <FadeInSection>
+                            <h1>{props.frontmatter.title}</h1>
+                        </FadeInSection>
+                        <FadeInSection>
+                            <h2>{props.frontmatter.date}</h2>
+                        </FadeInSection>
+                    </div>
                     <FadeInSection>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                             <img src={`${props.frontmatter.cover_image}`} alt={`${props.frontmatter.title} post photo`} style={{ width: "80%" }} />
