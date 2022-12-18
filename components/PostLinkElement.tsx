@@ -12,8 +12,8 @@ export default function PostLinkElement(props: PostLinkElementProps) {
     return <div className="blogpostlinkelementcontainer">
         <Link href={`/blog/${props.slug}`} style={{ height: "100%" }}>
             <div style={{ display: "flex", justifyContent: "flex-start", height: "100%" }}>
-                <img src={props.imagePath} alt={`${props.title} Post Image`} style={{ height: "100%", paddingRight: "2vh" }} />
-                <div style={{ padding: "1.5vh", display: "flex", flexDirection: "column", justifyContent: "space-between", width: "100%", overflow: 'scroll' }}>
+                {/* <img src={props.imagePath} alt={`${props.title} Post Image`} style={{ paddingRight: "2vh", width: "25%" }} /> */}
+                <div style={{ padding: "1.5vh", display: "flex", flexDirection: "column", justifyContent: "space-between", overflow: 'scroll' }}>
                     <div>
                         <div style={{ display: "flex", justifyContent: 'space-between' }}>
                             <h1>{props.title}</h1>
