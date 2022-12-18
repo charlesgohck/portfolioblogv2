@@ -52,6 +52,7 @@ export default function BlogPage(props: BlogPageProps) {
                             <h2>{props.frontmatter.date}</h2>
                         </FadeInSection>
                     </div>
+                    <br/>
                     <FadeInSection>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                             <img src={`${props.frontmatter.cover_image}`} alt={`${props.frontmatter.title} post photo`} style={{ width: "80%" }} />
