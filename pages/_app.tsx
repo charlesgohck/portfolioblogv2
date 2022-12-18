@@ -5,7 +5,7 @@ import '../styles/imports.css';
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { routerPaths } from './constants';
+import { routerPaths } from './../utils';
 import FadeInSection from '../components/FadeInSection';
 
 export default function App({ Component, pageProps }: AppProps) {

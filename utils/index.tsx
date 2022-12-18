@@ -4,4 +4,24 @@ const sortByDate = (a: any, b: any): number => {
     return bDate.getTime() - aDate.getTime();
 }
 
-export { sortByDate };
+interface RouterPath {
+    path: string,
+    iconClass: string,
+    name: string
+}
+
+
+const routerPaths: RouterPath[] = [
+    {
+        path: "/",
+        iconClass: 'fa solid fa-house-chimney',
+        name: "About"
+    },
+    {
+        path: "/blog",
+        iconClass: "fa-solid fa-book",
+        name: "Blog"
+    }
+];
+
+export { routerPaths, sortByDate };
