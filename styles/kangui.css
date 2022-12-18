@@ -94,6 +94,10 @@
     transition-duration: 0.5s;
 }
 
+.reactmarkdowncomponent {
+    white-space: pre-wrap;
+}
+
 .blogarticle {
     padding: 3vh;
 }

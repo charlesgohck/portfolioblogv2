@@ -59,7 +59,7 @@ export default function BlogPage(props: BlogPageProps) {
                     </FadeInSection>
                     <FadeInSection>
                         <div style={{ padding: "5vh" }}>
-                            <ReactMarkdown>{props.content}</ReactMarkdown>
+                            <ReactMarkdown className='reactmarkdowncomponent'>{props.content}</ReactMarkdown>
                         </div>
                     </FadeInSection>
                 </article>
