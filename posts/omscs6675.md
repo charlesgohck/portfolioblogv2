@@ -1,7 +1,7 @@
 ---
 title: 'OMSCS: Summer 2022 Course Review'
 date: 'December 22 2022'
-excerpt: 'For the Summer 2022 semester, I took CS6675 Advanced Internet Systems and Applications. Here is my review for these courses.'
+excerpt: 'For the Summer 2022 semester, I took CS6675 Advanced Internet Systems and Applications. Here is my review for this course.'
 cover_image: '/assets/images/posts/OMSCS/CS6675Poster.jpg'
 ---
 # Review: CS6675 Advanced Internet Systems and Applications
