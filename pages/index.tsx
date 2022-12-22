@@ -31,7 +31,7 @@ export default function Home() {
                 </FadeInSection>
                 <FadeInSection>
                     <section className='sectionelement'>
-                        <i style={{ color: 'darkslategray' }} className="sectionsubelement fa-solid fa-timeline fa-10x" />
+                        <i className="sectionsubelement fa-solid fa-timeline fa-10x" />
                         <div className='sectionsubelement'>
                             <h1>Experience</h1>
                             <br/>
@@ -48,7 +48,7 @@ export default function Home() {
                                 <br />
                                 <div className='timelineelement'>
                                     <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;Ocbtober 2020 - September 2022:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Software Engineer (Associate Systems Administrator @ Visa</strong></p>
+                                    <p className='timelineelementtextcontent'><strong>Software Engineer (Associate Systems Administrator) @ Visa</strong></p>
                                 </div>
                                 <br />
                                 <div className='timelineelement'>
@@ -66,7 +66,7 @@ export default function Home() {
                 </FadeInSection>
                 <FadeInSection>
                     <section className='sectionelement'>
-                        <i style={{ color: 'darkslategray' }} className="sectionsubelement fa-solid fa-graduation-cap fa-10x" />
+                        <i className="sectionsubelement fa-solid fa-graduation-cap fa-10x" />
                         <div className='sectionsubelement'>
                             <h1>Education</h1>
                             <br/>
@@ -87,7 +87,7 @@ export default function Home() {
                 </FadeInSection>
                 <FadeInSection>
                     <section className='sectionelement'>
-                        <i style={{ color: 'darkslategray' }} className="sectionsubelement fa-solid fa-laptop-code fa-10x" />
+                        <i className="sectionsubelement fa-solid fa-laptop-code fa-10x" />
                         <div className='sectionsubelement'>
                             <h1>Technical Skills</h1>
                             <br/>
@@ -132,7 +132,7 @@ export default function Home() {
                 </FadeInSection>
                 <FadeInSection>
                     <section className='sectionelement'>
-                        <i style={{ color: 'darkslategray' }} className="sectionsubelement fa-solid fa-person-chalkboard fa-10x" />
+                        <i className="sectionsubelement fa-solid fa-person-chalkboard fa-10x" />
                         <div className='sectionsubelement'>
                             <h1>Integrated Skills</h1>
                             <br/>
