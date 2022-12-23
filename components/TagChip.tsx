@@ -5,5 +5,7 @@ interface TagChipProps {
 }
 
 export default function TagChip(props: TagChipProps) {
-    return <div className="tagchipcontainer">{props.tag}</div>
+    return <Link href={`/blog/tag/${props.tag}`}>
+        <div className="tagchipcontainer">{props.tag}</div>
+    </Link>
 }

@@ -30,7 +30,7 @@ export default function PostLinkElement(props: PostLinkElementProps) {
                     </div>
                     <div style={{ marginTop: "0.5vh", display: "flex", justifyContent: "space-between", alignItems: 'flex-end' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-                            {tagsSplit.map(tagName => <Link key={`${props.title}${tagName}Link`} href={`/blog/tag/${tagName}`}><TagChip tag={tagName}/></Link>)}
+                            {tagsSplit.map(tagName => <TagChip key={`${props.title}${tagName}TagLink`} tag={tagName}/>)}
                         </div>
                         <p><strong>Read More</strong>&nbsp;&nbsp;<i className="fa solid fa-arrow-right" /></p>
                     </div>

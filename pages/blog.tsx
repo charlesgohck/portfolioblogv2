@@ -3,10 +3,11 @@ import { Inter } from '@next/font/google'
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter'
-import { sortByDate } from "../utils";
+import { BLOG_TAGS, sortByDate } from "../utils";
 import FadeInSection from "../components/FadeInSection";
 import { InferGetStaticPropsType } from "next/types";
 import PostLinkElement from "../components/PostLinkElement";
+import TagChip from "../components/TagChip";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,6 +38,14 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
                         </div>
                     )}
                 </div>
+                <FadeInSection>
+                    <h1 style={{ textAlign: "center", paddingTop: '5vh' }}>Topics</h1>
+                </FadeInSection>
+                <FadeInSection>
+                    <div className="sectionelement">
+                        {BLOG_TAGS.sort().map(tag => <TagChip tag={tag} />)}
+                    </div>
+                </FadeInSection>\
             </main>
         </>
     )
