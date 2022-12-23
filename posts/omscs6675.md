@@ -1,8 +1,9 @@
 ---
-title: 'OMSCS: Summer 2022 Course Review'
+title: 'OMSCS: Summer 2022'
 date: 'December 22 2022'
-excerpt: 'For the Summer 2022 semester, I took CS6675 Advanced Internet Systems and Applications. Here is my review for this course.'
+excerpt: 'CS6675 Advanced Internet Systems and Applications is a great introduction into how various modern internet applications were built.'
 cover_image: '/assets/images/posts/OMSCS/CS6675Poster.jpg'
+tags: 'reviews,omscs,gatech'
 ---
 # Review: CS6675 Advanced Internet Systems and Applications
 ## Objective
@@ -14,4 +15,4 @@ The assignments were consistent, and I enjoyed designing and writing up systems 
 
 No coding was required for the course's summer version, although if time permitted, students could choose to implement one of the designed internet systems.
 ## Difficulty
-This course required consistent effort. I spent approximately **8 - 15 hours** each week on the course. Given that it is a summer course, the project section and the final topics were optional. It was an excellent overview of modern internet systems that help run the world today. 
+This course required consistent effort. I spent approximately **8 - 15 hours** each week on the course. Given that it is a summer course, the project section and the final topics were optional. The course as a whole was an excellent overview of modern internet systems that help run the world today. 

@@ -95,6 +95,22 @@
     transition-duration: 0.5s;
 }
 
+.tagchipcontainer {
+    padding: 0.5vh;
+    margin: 0.5vh;
+    color: white;
+    background-color: black;
+}
+
+.tagchipcontainer:hover {
+    transition-duration: 0.5s;
+    padding: 0.5vh;
+    margin: 0.5vh;
+    opacity: 0.8;
+    color: black;
+    background-color: white;
+}
+
 .reactmarkdowncomponent {
     white-space: pre-wrap;
 }
