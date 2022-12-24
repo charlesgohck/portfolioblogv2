@@ -13,13 +13,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
 
-    const title: string = `Charles Goh (长康): Blog History for ${year}`;
+    const title: string = `Charles Goh (伍长康): Blog History for ${year}`;
 
     return (
         <>
             <Head>
                 <title>{title}</title>
-                <meta name="description" content="Charles Goh (长康) Blog" />
+                <meta name="description" content="Charles Goh (伍长康) Blog" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>

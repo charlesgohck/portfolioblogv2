@@ -9,58 +9,34 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Charles Goh (长康)</title>
-                <meta name="description" content="Charles Goh (长康) Site" />
+                <title>Charles Goh (伍长康)</title>
+                <meta name="description" content="Charles Goh (伍长康) Site" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>
             <main>
                 <FadeInSection>
                     <section className='sectionelement'>
-                        <Image src={'/assets/CharlesInSuitSquare.jpg'} alt={'Charles Goh (长康) In A Suit'} width={300} height={300} className="sectionsubelement" style={{ borderRadius: "50%" }} priority />
+                        <Image src={'/assets/CharlesInSuitSquare.jpg'} alt={'Charles Goh (伍长康) In A Suit'} width={300} height={300} className="sectionsubelement" style={{ borderRadius: "50%" }} priority />
                         <div className='sectionsubelement'>
-                            <h1>Hello. I am Charles Goh (长康).</h1>
+                            <h1>Hello. I am Charles Goh (伍长康).</h1>
                             <br/>
                             <p>I am an&nbsp;
                                 <span className="elementfadeinleft"><strong>engineer, </strong></span>
                                 <span className="elementfadeinleft" style={{ animationDuration: "4s" }}><strong>problem solver, </strong></span>
-                                <span className="elementfadeinleft" style={{ animationDuration: "8s" }}><strong>and lifelong learner. </strong></span>
+                                <span className="elementfadeinleft" style={{ animationDuration: "8s" }}><strong>and learner. </strong></span>
                             </p>
                         </div>
                     </section>
                 </FadeInSection>
                 <FadeInSection>
                     <section className='sectionelement'>
-                        <i className="sectionsubelement fa-solid fa-timeline fa-10x" />
+                        <i className="sectionsubelement fa-solid fa-briefcase fa-10x" />
                         <div className='sectionsubelement'>
                             <h1>Experience</h1>
                             <br/>
-                            <div>
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-spinner" />&nbsp;&nbsp;November 2022 - Present:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Senior Software Engineer @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;September 2022 - November 2022:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Senior Software Engineer (Systems Administrator) @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;Ocbtober 2020 - September 2022:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Software Engineer (Associate Systems Administrator) @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;May 2019 - August 2019:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Software Engineer (Systems Administrator) Intern @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;December 2013 - December 2015:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Full-Time National Serviceman (Combat Signaller) @ Singapore Armed Forces</strong></p>
-                                </div>
-                            </div>
+                            <h2>May 2019 - Present</h2>
+                            <p><strong>Intern to Senior Software Engineer @ Visa</strong></p>
                         </div>
                     </section>
                 </FadeInSection>

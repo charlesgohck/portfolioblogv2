@@ -15,8 +15,8 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
     return (
         <>
             <Head>
-                <title>Charles Goh (长康): Blog</title>
-                <meta name="description" content="Charles Goh (长康) Blog" />
+                <title>Charles Goh (伍长康): Blog</title>
+                <meta name="description" content="Charles Goh (伍长康) Blog" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>

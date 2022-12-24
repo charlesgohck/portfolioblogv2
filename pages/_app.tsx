@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return <div className='bgcontainer'>
         <div className='navbar' id="topNavBar">
-            <img src={"/assets/Logo.svg"} alt={"Charles Goh (长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} />
+            <img src={"/assets/Logo.svg"} alt={"Charles Goh (伍长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} />
             {
                 routerPaths.map(
                     routerPath => <Link 
