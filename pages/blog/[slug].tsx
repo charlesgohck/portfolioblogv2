@@ -10,9 +10,12 @@ import { BlogPageProps, IParamsBlog } from '../../utils';
 import BackToPostsSection from '../../components/BackToPostsSection';
 
 export default function BlogPage(props: BlogPageProps) {
+
+    const title = `Charles Goh (长康): ${props.frontmatter.title}`;
+
     return <>
         <Head>
-            <title>Charles Goh (长康): {props.frontmatter.title}</title>
+            <title>{title}</title>
             <meta name="description" content="Charles Goh (长康) Blog" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/assets/favicon.jpg" />

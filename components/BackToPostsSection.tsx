@@ -8,6 +8,10 @@ interface BackToPostsSectionProps {
 }
 
 export default function BackToPostsSection(props: BackToPostsSectionProps) {
+
+    const currentDate = new Date();
+    const currentYear = currentDate.getUTCFullYear();
+
     return <div>
         {
             props.showBackToPostsLink === null || props.showBackToPostsLink === undefined || props.showBackToPostsLink
@@ -24,7 +28,15 @@ export default function BackToPostsSection(props: BackToPostsSectionProps) {
         </FadeInSection>
         <FadeInSection>
             <div className="sectionelement">
-                {BLOG_TAGS.sort().map(tag => <TagChip tag={tag} />)}
+                {BLOG_TAGS.sort().map(tag => <TagChip key={`tagFor${tag}`} tag={tag} />)}
+            </div>
+        </FadeInSection>
+        <FadeInSection>
+            <h1 style={{ textAlign: "center", paddingTop: '5vh' }}>Archive</h1>
+        </FadeInSection>
+        <FadeInSection>
+            <div className="sectionelement">
+                Hello World
             </div>
         </FadeInSection>
     </div>

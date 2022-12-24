@@ -81,6 +81,7 @@
 }
 
 .blogpostlinkelementcontainer:hover {
+    cursor: pointer;
     margin: 1vh;
     overflow-wrap: break-word;
     background-color: white;
@@ -103,6 +104,7 @@
 }
 
 .tagchipcontainer:hover {
+    cursor: pointer;
     transition-duration: 0.5s;
     padding: 0.5vh;
     margin: 0.5vh;
