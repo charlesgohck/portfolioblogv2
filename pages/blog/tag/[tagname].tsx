@@ -24,7 +24,9 @@ export default function BlogFilterByTags({ tagname, posts }: InferGetStaticProps
             <main>
                 <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Posts On: {tagname}</h1>
                 <div className="sectionelement">
-                    {posts.map(post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
+                    {posts.length === 0 
+                    ? <p>No content found...</p>
+                    : posts.map(post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
                             <FadeInSection>
                                 <PostLinkElement
                                     slug={post.slug}

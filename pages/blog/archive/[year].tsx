@@ -1,32 +1,34 @@
-import Head from "next/head"
-import { Inter } from '@next/font/google'
 import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter'
-import { sortByDate } from "../utils";
-import FadeInSection from "../components/FadeInSection";
-import { InferGetStaticPropsType } from "next/types";
-import PostLinkElement from "../components/PostLinkElement";
-import BackToPostsSection from "../components/BackToPostsSection";
+import path from "path";
+import matter from "gray-matter";
+import { InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
+import FadeInSection from '../../../components/FadeInSection';
+import PostLinkElement from '../../../components/PostLinkElement';
+import { Inter } from '@next/font/google';
+import { sortByDate } from '../../../utils';
+import BackToPostsSection from '../../../components/BackToPostsSection';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Blog({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+
+    const title: string = `Charles Goh (长康): Blog Archive for ${year}`;
+
     return (
         <>
             <Head>
-                <title>Charles Goh (长康): Blog</title>
+                <title>{title}</title>
                 <meta name="description" content="Charles Goh (长康) Blog" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>
             <main>
-                <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Recent</h1>
+                <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Archived Posts in: {year}</h1>
                 <div className="sectionelement">
-                    {posts.length === 0 
+                    {posts.length == 0
                     ? <p>No content found...</p>
-                    : posts.map(
-                        post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
+                    : posts.map(post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
                             <FadeInSection>
                                 <PostLinkElement
                                     slug={post.slug}
@@ -40,18 +42,41 @@ export default function Blog({ posts }: InferGetStaticPropsType<typeof getStatic
                         </div>
                     )}
                 </div>
-                <BackToPostsSection showBackToPostsLink={false}/>
+                <BackToPostsSection />
             </main>
         </>
     )
 }
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
+
+    const currentDate: Date = new Date();
+    const currentYear: number = currentDate.getUTCFullYear();
+
+    var paths = [];
+    for (var i = 2022; i <= currentYear; i++) {
+        paths.push({
+            params: {
+                year: i.toString()
+            }
+        })
+    }
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export async function getStaticProps(context: any) {
+
+    const year: string = context.params.year;
+
     // Get files from the posts dir
     const files = fs.readdirSync(path.join('posts'))
 
     // Get slug and frontmatter from posts
-    const posts = files.map((filename) => {
+    var posts = files.map((filename) => {
         // Create slug
         const slug = filename.replace('.md', '')
 
@@ -69,8 +94,15 @@ export async function getStaticProps() {
         }
     })
 
+    posts = posts.filter(post => {
+        const postDate: Date = new Date(post.frontmatter.date);
+        const postDateYear: number = postDate.getUTCFullYear();
+        return postDateYear.toString() === year;
+    });
+
     return {
         props: {
+            year: year,
             posts: posts.sort(sortByDate),
         },
     }

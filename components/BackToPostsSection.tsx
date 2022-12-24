@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BLOG_TAGS } from "../utils";
+import ArchiveYearChip from "./ArchiveYearChip";
 import FadeInSection from "./FadeInSection";
 import TagChip from "./TagChip";
 
@@ -9,8 +10,12 @@ interface BackToPostsSectionProps {
 
 export default function BackToPostsSection(props: BackToPostsSectionProps) {
 
-    const currentDate = new Date();
-    const currentYear = currentDate.getUTCFullYear();
+    const currentDate: Date = new Date();
+    const currentYear: number = currentDate.getUTCFullYear();
+    var yearsList: string[] = [];
+    for (var i = 2022; i <= currentYear; i++) {
+        yearsList.push(i.toString());
+    }
 
     return <div>
         {
@@ -36,7 +41,7 @@ export default function BackToPostsSection(props: BackToPostsSectionProps) {
         </FadeInSection>
         <FadeInSection>
             <div className="sectionelement">
-                Hello World
+                {yearsList.sort().map(yearString => <ArchiveYearChip key={`archiveForYear${yearString}`} year={yearString} />)}
             </div>
         </FadeInSection>
     </div>
