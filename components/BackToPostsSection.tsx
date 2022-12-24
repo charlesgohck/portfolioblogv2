@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BLOG_TAGS } from "../utils";
-import ArchiveYearChip from "./ArchiveYearChip";
+import HistoryYearChip from "./HistoryYearChip";
 import FadeInSection from "./FadeInSection";
 import TagChip from "./TagChip";
 
@@ -41,7 +41,7 @@ export default function BackToPostsSection(props: BackToPostsSectionProps) {
         </FadeInSection>
         <FadeInSection>
             <div className="sectionelement">
-                {yearsList.sort().map(yearString => <ArchiveYearChip key={`archiveForYear${yearString}`} year={yearString} />)}
+                {yearsList.sort().map(yearString => <HistoryYearChip key={`historyForYear${yearString}`} year={yearString} />)}
             </div>
         </FadeInSection>
     </div>

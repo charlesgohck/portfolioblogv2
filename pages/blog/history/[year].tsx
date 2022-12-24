@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
 
-    const title: string = `Charles Goh (长康): Blog Archive for ${year}`;
+    const title: string = `Charles Goh (长康): Blog History for ${year}`;
 
     return (
         <>
@@ -24,7 +24,7 @@ export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsTyp
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>
             <main>
-                <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Archived Posts in: {year}</h1>
+                <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Posts in: {year}</h1>
                 <div className="sectionelement">
                     {posts.length == 0
                     ? <p>No content found...</p>
