@@ -131,6 +131,31 @@ export default function Home() {
                         </div>
                     </section>
                 </FadeInSection>
+                <FadeInSection>
+                    <section className='sectionelement'>
+                        <i className="sectionsubelement fa-solid fa-person-running fa-10x" />
+                        <div className='sectionsubelement'>
+                            <h1>Interests/Hobbies</h1>
+                            <br/>
+                            <div>
+                                <div>
+                                    <h3><i className='fa-solid fa-dumbbell'/>&nbsp;&nbsp;Strength Training</h3>
+                                    <p>2012 - Present</p>
+                                </div>
+                                <br />
+                                <div>
+                                    <h3><i className='fa-solid fa-person-running'/>&nbsp;&nbsp;Running</h3>
+                                    <p>2012 - Present</p>
+                                </div>
+                                <br />
+                                <div>
+                                    <h3><i className='fa-solid fa-earth-americas'/>&nbsp;&nbsp;Model United Nations</h3>
+                                    <p>2008 - 2012</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </FadeInSection>
             </main>
         </>
     )
