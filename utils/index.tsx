@@ -50,7 +50,7 @@ const BLOG_TAGS: string[] = ["career", "omscs", "reviews", "gatech"].sort();
 const routerPaths: RouterPath[] = [
     {
         path: "/",
-        iconClass: 'fa solid fa-house-chimney',
+        iconClass: 'fa solid fa-user',
         name: "About"
     },
     {

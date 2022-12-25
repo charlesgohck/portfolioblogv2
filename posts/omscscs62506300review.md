@@ -1,7 +1,7 @@
 ---
 title: 'OMSCS: Fall 2022'
 date: 'December 18 2022'
-excerpt: 'For the Fall 2022 semester, I took CS6250 Computer Networks and CS6300 Software Development Process. Here is my review for these courses.'
+excerpt: 'For the Fall 2022 semester, I took CS6250 Computer Networks and CS6300 Software Development Process. Here is my review of these courses.'
 cover_image: '/assets/images/posts/OMSCS/CS6300CS6250Poster.jpg'
 tags: 'reviews,omscs,gatech'
 ---
