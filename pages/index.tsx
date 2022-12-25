@@ -144,7 +144,7 @@ export default function Home() {
                             <div>
                                 <div>
                                     <h3><i className='fa-solid fa-person-running' />&nbsp;&nbsp;Fitness Training</h3>
-                                    <p>Strength Training, Medium Distance Running</p>
+                                    <p>Strength Training, Running, Hiking</p>
                                 </div>
                                 <br />
                                 <br />
