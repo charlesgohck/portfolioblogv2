@@ -53,21 +53,6 @@
     padding: 1vh;
 }
 
-.timelineelement {
-    margin-bottom: 0.5vh;
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.timelineelementtextheading {
-    width: 35%;
-}
-
-.timelineelementtextcontent {
-    width: 65%;
-}
-
 .sectionsubelement {
     padding: 1vh
 }
@@ -143,4 +128,23 @@ h1 {
 
 p {
     font-size: large
+}
+
+@media (prefers-color-scheme: dark) {
+    .tagchipcontainer {
+        padding: 0.5vh;
+        margin: 0.5vh;
+        color: black;
+        background-color: white;
+    }
+    
+    .tagchipcontainer:hover {
+        cursor: pointer;
+        transition-duration: 0.5s;
+        padding: 0.5vh;
+        margin: 0.5vh;
+        opacity: 0.8;
+        color: white;
+        background-color: black;
+    }
 }

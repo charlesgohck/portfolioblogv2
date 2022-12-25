@@ -45,7 +45,7 @@ interface IParamsBlogWithTag extends ParsedUrlQuery {
 // Utility Helper TYpes that extend other types
 
 // Utility constants
-const BLOG_TAGS: string[] = ["omscs", "reviews", "gatech"];
+const BLOG_TAGS: string[] = ["career", "omscs", "reviews", "gatech"].sort();
 
 const routerPaths: RouterPath[] = [
     {

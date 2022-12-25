@@ -31,7 +31,6 @@ export default function PostLinkElement(props: PostLinkElementProps) {
                         <h1>{props.title}</h1>
                         <h3>{props.date}</h3>
                     </div>
-                    <br />
                     <p>{props.excerpt}</p>
                 </div>
                 <div style={{ marginTop: "0.5vh", display: "flex", justifyContent: "space-between", alignItems: 'flex-end' }}>

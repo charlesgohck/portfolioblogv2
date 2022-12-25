@@ -33,15 +33,15 @@ export default function BackToPostsSection(props: BackToPostsSectionProps) {
         </FadeInSection>
         <FadeInSection>
             <div className="sectionelement">
-                {BLOG_TAGS.sort().map(tag => <TagChip key={`tagFor${tag}`} tag={tag} />)}
+                {BLOG_TAGS.map(tag => <TagChip key={`tagFor${tag}`} tag={tag} />)}
             </div>
         </FadeInSection>
         <FadeInSection>
-            <h1 style={{ textAlign: "center", paddingTop: '5vh' }}>Archive</h1>
+            <h1 style={{ textAlign: "center", paddingTop: '5vh' }}>History</h1>
         </FadeInSection>
         <FadeInSection>
             <div className="sectionelement">
-                {yearsList.sort().map(yearString => <HistoryYearChip key={`historyForYear${yearString}`} year={yearString} />)}
+                {yearsList.map(yearString => <HistoryYearChip key={`historyForYear${yearString}`} year={yearString} />)}
             </div>
         </FadeInSection>
     </div>
