@@ -23,7 +23,7 @@ export default function BackToPostsSection(props: BackToPostsSectionProps) {
                 ? <section className='sectionelement'>
                     <div className='linkelement'>
                         <Link href={'/blog'}>
-                            <p><strong>Back To Posts</strong>&nbsp;&nbsp;<i className="fa solid fa-arrow-right" /></p>
+                            <p><strong>Back To All Posts</strong>&nbsp;&nbsp;<i className="fa solid fa-arrow-right" /></p>
                         </Link>
                     </div>
                 </section> : <></>

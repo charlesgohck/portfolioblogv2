@@ -143,14 +143,14 @@ export default function Home() {
                             <br />
                             <div>
                                 <div>
-                                    <h3><i className='fa-solid fa-person-running' />&nbsp;&nbsp;Fitness Training</h3>
-                                    <p>Strength Training, Running, Hiking</p>
+                                    <h3><i className='fa-solid fa-person-running' />&nbsp;&nbsp;Health and Fitness</h3>
+                                    <p>Strength Training, Running, Hiking, Nutrition Planning</p>
                                 </div>
                                 <br />
                                 <br />
                                 <div>
                                     <h3><i className='fa-solid fa-earth-americas' />&nbsp;&nbsp;World Affairs</h3>
-                                    <p>Geopolitical Trends, Technology Trends, Economic Trends.</p>
+                                    <p>Geopolitical, Technology, and Economic Trends.</p>
                                 </div>
                             </div>
                         </div>

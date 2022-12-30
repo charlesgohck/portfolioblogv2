@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 
 interface HistoryYearChipProps {
     year: string
+    hasNoDarkMode?: boolean
 }
 
 export default function HistoryYearChip(props: HistoryYearChipProps) {
@@ -14,5 +15,7 @@ export default function HistoryYearChip(props: HistoryYearChipProps) {
         router.push(`/blog/history/${props.year}`);
     }
 
-    return <div onClick={(e: React.MouseEvent): void => onClickTagChip(e)} className="tagchipcontainer">{props.year}</div>
+    let historyChipClassName = props.hasNoDarkMode ? "tagchipcontainernodarkmode": "tagchipcontainer";
+
+    return <div onClick={(e: React.MouseEvent): void => onClickTagChip(e)} className={historyChipClassName}>{props.year}</div>
 }

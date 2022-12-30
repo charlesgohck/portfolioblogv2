@@ -5,7 +5,6 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import FadeInSection from '../../components/FadeInSection';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import Link from 'next/link';
 import { BlogPageProps, IParamsBlog } from '../../utils';
 import BackToPostsSection from '../../components/BackToPostsSection';
 
