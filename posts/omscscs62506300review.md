@@ -24,4 +24,4 @@ After learning about various ways of collaboration, I introduced some of them to
 Finally, I gained much experience collaborating with team members across 3 different timezones in the Android Programming group project. As someone who likes to start and complete assignments earlier, I found that it was difficult to get in touch with my team members at the beginning. One team member also did not make it to the first meeting. We gave him a chance and were not disappointed. Our weekly schedule consisted of reading and assigning parts of a deliverable at the start, completing what we could during the week, and then getting together on a weekend call to finalize the deliverable. Overall, everyone contributed to the best of their ability. 
 
 ## Difficulty
-As someone who has undergraduate and work experience as a Software Engineer, this course was manageable with consistent effort. I spent an estimate of between **5 - 12 hours** on this course.
+I spent an estimate of between **5 - 12 hours** on this course. The assignments were tedious but manageable.

@@ -15,4 +15,4 @@ I enjoyed designing and writing up systems to solve problems for the assignments
 
 No coding was required for the course's summer version, although if time permitted, students could choose to implement one of the designed internet systems.
 ## Difficulty
-I spent approximately **8 - 15 hours** each week on the course. Given that it is a summer course, the project section and the final topics were optional. The course as a whole was an excellent overview of modern internet systems that help run the world today. 
+I spent approximately **8 - 15 hours** each week on the course. Given that it is a summer course, the project section and the final topics were optional. 

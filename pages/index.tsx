@@ -12,6 +12,7 @@ export default function Home() {
                 <title>Charles Goh (伍长康)</title>
                 <meta name="description" content="Charles Goh (伍长康) Site" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="google-site-verification" content="18humsyPw5_qxmyW9wyh0c_0lGnA3SGtEglAKBCmd3k" />
                 <link rel="icon" href="/assets/favicon.jpg" />
             </Head>
             <main>
