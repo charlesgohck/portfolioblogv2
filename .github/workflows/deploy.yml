@@ -19,6 +19,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
           REMOTE_USER: ${{ secrets.USERNAME }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
           SOURCE: ./.next/
           TARGET: /var/www/html/
-          args: "-rltgoDzvO --delete"
