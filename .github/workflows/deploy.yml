@@ -1,0 +1,24 @@
+name: Deploy Next.js App
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build Next.js app
+        run: npm run build
+      - name: Deploy app
+        uses: easingthemes/ssh-deploy@v2.0.5
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-host: ${{ secrets.SERVER_IP }}
+          ssh-port: ${{ secrets.SSH_PORT }}
+          local-path: ./.next/
+          remote-path: /var/www/html/
+          args: "-rltgoDzvO --delete"
