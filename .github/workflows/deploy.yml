@@ -16,9 +16,9 @@ jobs:
       - name: Deploy app
         uses: easingthemes/ssh-deploy@v2.0.5
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          ssh-host: ${{ secrets.SERVER_IP }}
-          ssh-port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
           local-path: ./.next/
           remote-path: /var/www/html/
           args: "-rltgoDzvO --delete"
