@@ -16,9 +16,8 @@ jobs:
       - name: Deploy app
         uses: easingthemes/ssh-deploy@v2.1.1
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.SERVER_IP }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          REMOTE_PORT: ${{ secrets.SSH_PORT }}
-          SOURCE: ./.next/
-          TARGET: /var/www/html/
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          source: ./.next/
+          target: /var/www/html/
