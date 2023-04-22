@@ -14,16 +14,11 @@ jobs:
       - name: Build Next.js app
         run: npm run build
       - name: Deploy app
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SERVER_IP: ${{ secrets.SERVER_IP }}
-          USERNAME: ${{ secrets.USERNAME }}
-          SSH_PORT: ${{ secrets.SSH_PORT }}
         uses: easingthemes/ssh-deploy@v2.1.1
         with:
-          SSH_PRIVATE_KEY: ${{ env.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ env.SERVER_IP }}
-          REMOTE_USER: ${{ env.USERNAME }}
-          REMOTE_PORT: ${{ env.SSH_PORT }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          REMOTE_PORT: ${{ secrets.SSH_PORT }}
           SOURCE: ./.next/
           TARGET: /var/www/html/
