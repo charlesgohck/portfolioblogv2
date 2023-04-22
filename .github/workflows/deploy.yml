@@ -14,10 +14,12 @@ jobs:
       - name: Build Next.js app
         run: npm run build
       - name: Deploy app
-        uses: easingthemes/ssh-deploy@v2.1.1
-        with:
+        uses: easingthemes/ssh-deplo@main
+        env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           SOURCE: ./.next/
           TARGET: /var/www/html/
+          EXCLUDE: "/dist/, /node_modules/"
