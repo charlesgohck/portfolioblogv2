@@ -15,6 +15,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
+          node-version: '18.x'
       - name: Install Ansible
         run: pip install ansible
       - name: Deploy with Ansible
