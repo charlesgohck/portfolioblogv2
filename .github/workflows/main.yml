@@ -11,15 +11,14 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+    - name: Delete existing folder
+      run: |
+        rm -rf /home/charlesgohck/portfolioblogv2
     - name: Checkout Code
       uses: actions/checkout@v3
-    - name: Clone Portfolio Blog
-      run: |
-        cd /home/charlesgohck
-        git clone https://github.com/charlesgohck/potfolioblogv2.git
     - name: Install dependencies for application
       run: |
-        cd /home/charlesgohck/potfolioblogv2
+        cd /home/charlesgohck/portfolioblogv2
         npm install
     - name: Build application
       run: |
