@@ -1,25 +1,22 @@
-name: Deploy to VM
-
+name: My Workflow
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: self-hosted
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-          node-version: '18.x'
-      - name: Install Ansible
-        run: pip install ansible
-      - name: Deploy with Ansible
-        run: ansible-playbook deploy.yml --extra-vars ${{ secrets.SERVER_IP }}
-        env:
-          ANSIBLE_HOST_KEY_CHECKING: false
-          ANSIBLE_PRIVATE_KEY_FILE: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    - name: Run Commands
+      run: |
+        cd /var/www
+        git clone https://github.com/charlesgohck/potfolioblogv2.git
+        cd potfolioblogv2
+        npm install
+        npm run build
