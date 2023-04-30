@@ -18,7 +18,7 @@ jobs:
         rm -rf /home/charlesgohck/portfolioblogv2
     - name: Clone repository
       run: |
-        rm -rf https://github.com/charlesgohck/portfolioblogv2.git
+        git clone https://github.com/charlesgohck/portfolioblogv2.git
     - name: Install dependencies for application
       run: |
         cd /home/charlesgohck/portfolioblogv2
