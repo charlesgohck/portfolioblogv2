@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - name: Checkout Code
+    - name: Checkout Code v3
       uses: actions/checkout@v3
     - name: Delete existing folder if present
       run: |
