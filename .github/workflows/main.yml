@@ -1,4 +1,4 @@
-name: My Workflow
+name: Deploy Portfolio Blog workflow
 on:
   push:
     branches:
@@ -13,10 +13,17 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
-    - name: Run Commands
+    - name: Clone Portfolio Blog
       run: |
-        cd /var/www
+        cd /home/charlesgohck
         git clone https://github.com/charlesgohck/potfolioblogv2.git
-        cd potfolioblogv2
+    - name: Install dependencies for application
+      run: |
+        cd /home/charlesgohck/potfolioblogv2
         npm install
+    - name: Build application
+      run: |
         npm run build
+    - name: Deploy application on port 443
+      run: |
+        npm run start -- -p 443
