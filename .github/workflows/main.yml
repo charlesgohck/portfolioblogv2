@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - name: Delete existing folder
+    - name: Delete existing folder if present
       run: |
         rm -rf /home/charlesgohck/portfolioblogv2
     - name: Checkout Code
