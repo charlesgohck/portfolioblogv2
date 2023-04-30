@@ -11,11 +11,14 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
     - name: Delete existing folder if present
       run: |
         rm -rf /home/charlesgohck/portfolioblogv2
-    - name: Checkout Code
-      uses: actions/checkout@v3
+    - name: Clone repository
+      run: |
+        rm -rf https://github.com/charlesgohck/portfolioblogv2.git
     - name: Install dependencies for application
       run: |
         cd /home/charlesgohck/portfolioblogv2
