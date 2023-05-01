@@ -12,6 +12,9 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
+    - name: Stop Service running on Port 443
+      run: |
+        kill $(lsof -t -i:8080)
     - name: Delete Existing Folder if Present
       run: |
         rm -rf /home/charlesgohck/portfolioblogv2
