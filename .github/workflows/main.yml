@@ -12,6 +12,12 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
+    - name: Set NVM Directory
+      run: |
+        export NVM_DIR=~/.nvm
+    - name: Set NVM Source File
+      run: |
+        source ~/.nvm/nvm.sh
     - name: Delete Existing Folder if Present
       run: |
         rm -rf /home/charlesgohck/portfolioblogv2
