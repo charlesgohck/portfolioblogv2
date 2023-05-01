@@ -19,9 +19,11 @@ jobs:
     - name: Clone Repository
       run: |
         git clone git@github.com:charlesgohck/portfolioblogv2.git
-    - name: Install Dependencies
+    - name: Change Directory to Correct Directory
       run: |
         cd /home/charlesgohck/portfolioblogv2
+    - name: Install Dependencies
+      run: |
         npm install
     - name: Build Application
       run: |
