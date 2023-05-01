@@ -13,19 +13,19 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
-    - name: Delete existing folder if present
+    - name: Delete Existing Folder if Present
       run: |
         rm -rf /home/charlesgohck/portfolioblogv2
-    - name: Clone repository
+    - name: Clone Repository
       run: |
         git clone git@github.com:charlesgohck/portfolioblogv2.git
-    - name: Install dependencies for application
+    - name: Install Dependencies
       run: |
         cd /home/charlesgohck/portfolioblogv2
         npm install
-    - name: Build application
+    - name: Build Application
       run: |
         npm run build
-    - name: Deploy application on port 443
+    - name: Deploy Application On Port 443
       run: |
         npm run start -- -p 443
