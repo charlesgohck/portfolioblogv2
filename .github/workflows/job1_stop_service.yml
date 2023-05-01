@@ -7,5 +7,4 @@ jobs:
     steps:
     - name: Stop Service running on Port 443
       run: |
-        echo ${{ secrets.KILL_SECRET }}
-        sudo -S kill -9 $(sudo lsof -t -i:443)
+        kill -9 $(lsof -t -i:443)
