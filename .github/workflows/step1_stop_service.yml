@@ -1,4 +1,4 @@
-name: Cleanup
+name: Stop Existing Services
 on:
   push:
     branches:
