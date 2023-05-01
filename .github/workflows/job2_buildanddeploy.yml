@@ -1,4 +1,4 @@
-name: Build and Deploy Workflow
+name: Build and Deploy Job
 on:
   workflow_call:
 jobs:
