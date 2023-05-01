@@ -18,7 +18,7 @@ jobs:
         rm -rf /home/charlesgohck/portfolioblogv2
     - name: Clone Repository
       run: |
-        git clone git@github.com:charlesgohck/portfolioblogv2.git
+        git clone git@github.com:charlesgohck/portfolioblogv2.git /home/charlesgohck/portfolioblogv2
     - name: Change Directory to Correct Directory
       run: |
         cd /home/charlesgohck/portfolioblogv2
