@@ -11,4 +11,4 @@ jobs:
       run: |
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
-        npm stop
+        kill $(ps aux | grep '[n]pm' | awk '{print $2}')
