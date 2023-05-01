@@ -12,8 +12,5 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
-  call-stopserviceworkflow:
-    uses: ./.github/workflows/job1_stop_service.yml
   call-buildanddeploy:
-    needs: call-stopserviceworkflow
     uses: ./.github/workflows/job2_buildanddeploy.yml
