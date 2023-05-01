@@ -1,0 +1,17 @@
+name: Cleanup
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout Code v3
+      uses: actions/checkout@v3
+    - name: Stop Service running on Port 443
+      run: |
+        kill $(lsof -t -i:443)
