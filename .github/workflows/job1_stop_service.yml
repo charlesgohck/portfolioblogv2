@@ -8,4 +8,3 @@ jobs:
     - name: Stop Service running on Port 443
       run: |
         sudo kill -9 $(sudo lsof -t -i:443)
-        {{ secrets.USER_S_PASS }}
