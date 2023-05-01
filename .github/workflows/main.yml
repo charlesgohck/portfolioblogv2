@@ -12,12 +12,6 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
-    - name: Set NVM Directory
-      run: |
-        export NVM_DIR=~/.nvm
-    - name: Set NVM Source File
-      run: |
-        source ~/.nvm/nvm.sh
     - name: Delete Existing Folder if Present
       run: |
         rm -rf /home/charlesgohck/portfolioblogv2
@@ -27,12 +21,10 @@ jobs:
     - name: Change Directory to Correct Directory
       run: |
         cd /home/charlesgohck/portfolioblogv2
-    - name: Install Dependencies
+    - name: Install Dependencies, Build Application, Deploy on Port 443
       run: |
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
         npm install
-    - name: Build Application
-      run: |
         npm run build
-    - name: Deploy Application On Port 443
-      run: |
         npm run start -- -p 443
