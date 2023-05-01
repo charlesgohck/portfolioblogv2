@@ -1,4 +1,4 @@
-name: Deploy Portfolio Blog workflow
+name: Build and Deploy Workflow
 on:
   push:
     branches:
