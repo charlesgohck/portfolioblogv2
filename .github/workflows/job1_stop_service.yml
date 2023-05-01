@@ -1,11 +1,6 @@
-name: Stop Existing Services
+name: Stop Existing Services Job
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_call:
 jobs:
   build:
     runs-on: self-hosted
