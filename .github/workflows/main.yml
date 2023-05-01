@@ -1,4 +1,4 @@
-name: Deploy Portfolio Blog Main Workflow
+name: Deploy Portfolio Blog workflow
 on:
   push:
     branches:
@@ -12,5 +12,19 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
-  call-buildanddeploy:
-    uses: ./.github/workflows/job2_buildanddeploy.yml
+    - name: Delete Existing Folder if Present
+      run: |
+        rm -rf /home/charlesgohck/portfolioblogv2
+    - name: Clone Repository
+      run: |
+        git clone git@github.com:charlesgohck/portfolioblogv2.git /home/charlesgohck/portfolioblogv2
+    - name: Change Directory to Correct Directory
+      run: |
+        cd /home/charlesgohck/portfolioblogv2
+    - name: Install Dependencies, Build Application, Deploy on Port 443
+      run: |
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
+        npm install
+        npm run build
+        npm run start -- -p 443
