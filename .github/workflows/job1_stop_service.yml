@@ -9,4 +9,6 @@ jobs:
       uses: actions/checkout@v3
     - name: Stop Service running on Port 443
       run: |
-        kill $(lsof -t -i:443)
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
+        npm stop
