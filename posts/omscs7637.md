@@ -3,6 +3,7 @@ title: 'OMSCS: Spring 2023 Course Review'
 date: 'August 9 2023'
 excerpt: 'For the Spring 2023 semester, I took CS7637 Knowledge-Based Artificial Intelligence. Here is my review for this course.'
 cover_image: '/assets/images/posts/OMSCS/CS7637Poster.jpg'
+tags: 'reviews,omscs,gatech'
 ---
 # Review: CS7637 Knowledge-Based Artificial Intelligence
 ## Objective

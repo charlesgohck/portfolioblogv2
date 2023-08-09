@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     return <div className='bgcontainer'>
         <div className='navbar' id="topNavBar">
-            <img src={"/assets/Logo.svg"} alt={"Charles Goh (长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} />
+            <img src={"/assets/Logo.svg"} alt={"Charles Goh (伍长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} />
             {
                 routerPaths.map(
                     routerPath => <Link 
@@ -33,9 +33,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <footer style={{ display: 'flex', justifyContent: 'center', padding: '5vh' }}>
             <FadeInSection>
                 <a href='https://www.linkedin.com/in/charlesgohck/' target="_blank" rel="noopener noreferrer">
-                    <i style={{ color: '#0072b1' }} className="sectionsubelement fa-brands fa-linkedin fa-10x" />
+                    <i style={{ color: '#0072b1' }} className="sectionsubelement linkelement fa-brands fa-linkedin fa-10x" />
                 </a>
-                <i style={{ color: 'darkred' }} className="sectionsubelement fa-solid fa-at fa-10x" />
+                <i style={{ color: 'darkred' }} className="sectionsubelement linkelement fa-solid fa-at fa-10x" />
             </FadeInSection>    
         </footer>
         <Analytics />

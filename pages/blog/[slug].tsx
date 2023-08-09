@@ -1,43 +1,21 @@
 import fs from 'fs';
 import path from "path";
 import matter from "gray-matter";
-import { ParsedUrlQuery } from 'querystring';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import FadeInSection from '../../components/FadeInSection';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import Link from 'next/link';
-
-interface BlogPageStaticProps {
-    params: BlogPageStaticPropsSlugWrapper
-}
-
-interface BlogPageStaticPropsSlugWrapper {
-    slug: string
-}
-
-interface BlogPageProps {
-    frontmatter: FrontMatterProps,
-    slug: string,
-    content: string
-}
-
-interface FrontMatterProps {
-    title: string,
-    date: string,
-    excerpt: string,
-    cover_image: string
-}
-
-interface IParams extends ParsedUrlQuery {
-    slug: string
-}
+import { BlogPageProps, IParamsBlog } from '../../utils';
+import BackToPostsSection from '../../components/BackToPostsSection';
 
 export default function BlogPage(props: BlogPageProps) {
+
+    const title = `Charles Goh (伍长康): ${props.frontmatter.title}`;
+
     return <>
         <Head>
-            <title>Charles Goh (长康): {props.frontmatter.title}</title>
-            <meta name="description" content="Charles Goh (长康) Blog" />
+            <title>{title}</title>
+            <meta name="description" content="Charles Goh (伍长康) Blog" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/assets/favicon.jpg" />
         </Head>
@@ -65,13 +43,7 @@ export default function BlogPage(props: BlogPageProps) {
                     </FadeInSection>
                 </article>
             </section>
-            <section className='sectionelement'>
-                <div className='linkelement'>
-                    <Link href={'/blog'}>
-                        <p><strong>Back To Posts</strong>&nbsp;&nbsp;<i className="fa solid fa-arrow-right" /></p>
-                    </Link>
-                </div>
-            </section>
+            <BackToPostsSection/>
         </main>
     </>
 }
@@ -94,7 +66,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps: GetStaticProps = async (context) => {
 
-    const { slug } = context.params as IParams;
+    const { slug } = context.params as IParamsBlog;
 
     const markdownWithMeta = fs.readFileSync(
         path.join('posts', slug + '.md'),

@@ -12,7 +12,8 @@
 
 .navbaroption {
     height: 100%;
-    width: 10vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,21 +54,6 @@
     padding: 1vh;
 }
 
-.timelineelement {
-    margin-bottom: 0.5vh;
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.timelineelementtextheading {
-    width: 35%;
-}
-
-.timelineelementtextcontent {
-    width: 65%;
-}
-
 .sectionsubelement {
     padding: 1vh
 }
@@ -81,6 +67,7 @@
 }
 
 .blogpostlinkelementcontainer:hover {
+    cursor: pointer;
     margin: 1vh;
     overflow-wrap: break-word;
     background-color: white;
@@ -93,6 +80,40 @@
 .linkelement:hover {
     text-shadow: 0.5vh 0.75vh 0.5vh rgb(0 0 0 / 20%), 0.5vh 0.75vh 0.5vh rgb(0 0 0 / 20%);
     transition-duration: 0.5s;
+}
+
+.tagchipcontainer {
+    padding: 0.5vh;
+    margin: 0.5vh;
+    color: white;
+    background-color: black;
+}
+
+.tagchipcontainer:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+    padding: 0.5vh;
+    margin: 0.5vh;
+    opacity: 0.8;
+    color: black;
+    background-color: white;
+}
+
+.tagchipcontainernodarkmode {
+    padding: 0.5vh;
+    margin: 0.5vh;
+    color: white;
+    background-color: black;
+}
+
+.tagchipcontainernodarkmode:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+    padding: 0.5vh;
+    margin: 0.5vh;
+    opacity: 0.8;
+    color: black;
+    background-color: white;
 }
 
 .reactmarkdowncomponent {
@@ -125,4 +146,45 @@ h1 {
 
 p {
     font-size: large
+}
+
+@media (prefers-color-scheme: dark) {
+    .tagchipcontainer {
+        padding: 0.5vh;
+        margin: 0.5vh;
+        color: black;
+        background-color: white;
+    }
+    
+    .tagchipcontainer:hover {
+        cursor: pointer;
+        transition-duration: 0.5s;
+        padding: 0.5vh;
+        margin: 0.5vh;
+        opacity: 0.8;
+        color: white;
+        background-color: black;
+    }
+
+    .tagchipcontainernodarkmode {
+        padding: 0.5vh;
+        margin: 0.5vh;
+        color: white;
+        background-color: black;
+    }
+    
+    .tagchipcontainernodarkmode:hover {
+        cursor: pointer;
+        transition-duration: 0.5s;
+        padding: 0.5vh;
+        margin: 0.5vh;
+        opacity: 0.8;
+        color: black;
+        background-color: white;
+    }
+
+    .linkelement:hover {
+        text-shadow: 0.5vh 0.75vh 0.5vh lightslategray, 0.5vh 0.75vh 0.5vh lightslategray;
+        transition-duration: 0.5s;
+    }
 }
