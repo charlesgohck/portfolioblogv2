@@ -71,6 +71,7 @@ export default function Home() {
                             <h1>Education</h1>
                             <br/>
                             <div>
+<<<<<<< Updated upstream
                                 <div className='timelineelement'>
                                     <p className='timelineelementtextheading'><i className="fa-solid fa-spinner" />&nbsp;&nbsp;January 2022 - Present:&nbsp;</p>
                                     <p className='timelineelementtextcontent'><strong>Master of Science in Computer Science @ Georgia Institute of Technology</strong></p>
@@ -80,6 +81,19 @@ export default function Home() {
                                     <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;August 2016 - May 2020:&nbsp;</p>
                                     <p className='timelineelementtextcontent'><strong>Bachelor of Computing (Distinction Honours) in Computer Science
     with Minor in Management @ National University of Singapore</strong></p>
+=======
+                                <div>
+                                    <h2><i className="fa-solid fa-spinner" />&nbsp;&nbsp;January 2022 - Present</h2>
+                                    <p><strong>Master of Science in Computer Science (Tentative Specialization in Interactive Intelligence)</strong></p>
+                                    <p>Georgia Institute of Technology, USA</p>
+                                </div>
+                                <br/>
+                                <div>
+                                    <h2><i className="fa-solid fa-check" />&nbsp;&nbsp;May 2019 - June 2020</h2>
+                                    <p><strong>Bachelor of Computing (Distinction Honours) in Computer Science</strong></p>
+                                    <p><strong>Minor in Management</strong></p>
+                                    <p>National University of Singapore, Singapore</p>
+>>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>
@@ -155,6 +169,30 @@ export default function Home() {
                         </div>
                     </section>
                 </FadeInSection>
+<<<<<<< Updated upstream
+=======
+                <FadeInSection>
+                    <section className='sectionelement'>
+                        <i className="sectionsubelement fa-solid fa-bolt fa-10x" />
+                        <div className='sectionsubelement'>
+                            <h1>Interests/Hobbies</h1>
+                            <br />
+                            <div>
+                                <div>
+                                    <h3><i className='fa-solid fa-person-running' />&nbsp;&nbsp;Health and Fitness</h3>
+                                    <p>Strength Training, Running, Hiking, Nutrition Planning</p>
+                                </div>
+                                <br />
+                                <br />
+                                <div>
+                                    <h3><i className='fa-solid fa-earth-americas' />&nbsp;&nbsp;World Affairs</h3>
+                                    <p>Economic, Geopolitical, and Technology Trends.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </FadeInSection>
+>>>>>>> Stashed changes
             </main>
         </>
     )
