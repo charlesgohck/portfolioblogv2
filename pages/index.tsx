@@ -36,25 +36,9 @@ export default function Home() {
                             <div>
                                 <h1>Experience</h1>
                                 <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;September 2022 - November 2022:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Systems Administrator (Senior Software Engineer) @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;Ocbtober 2020 - September 2022:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Associate Systems Administrator (Software Engineer) @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;May 2019 - August 2019:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Systems Administrator (Software Engineer) Intern @ Visa</strong></p>
-                                </div>
-                                <br />
-                                <div className='timelineelement'>
-                                    <p className='timelineelementtextheading'><i className="fa-solid fa-check" />&nbsp;&nbsp;December 2013 - December 2015:&nbsp;</p>
-                                    <p className='timelineelementtextcontent'><strong>Full-Time National Serviceman (Combat Signaller) @ Singapore Armed Forces</strong></p>
-                                </div>
+                                <h2><i className="fa-solid fa-spinner" />&nbsp;&nbsp;May 2019 - Present</h2>
+                                <p><strong>Intern to Senior Software Engineer</strong></p>
+                                <p>Visa Worldwide @ Singapore</p>
                             </div>
                         </div>
                     </section>
