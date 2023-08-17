@@ -5,7 +5,7 @@ import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import FadeInSection from '../../../components/FadeInSection';
 import PostLinkElement from '../../../components/PostLinkElement';
-import { Inter } from '@next/font/google';
+import { Inter } from "next/font/google";
 import { BLOG_TAGS, sortByDate } from '../../../utils';
 import BackToPostsSection from '../../../components/BackToPostsSection';
 

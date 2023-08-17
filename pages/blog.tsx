@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { Inter } from '@next/font/google'
+import { Inter } from "next/font/google"
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter'
