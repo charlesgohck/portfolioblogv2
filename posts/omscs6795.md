@@ -1,5 +1,5 @@
 ---
-title: 'OMSCS: Summer 2023 Course Review'
+title: 'OMSCS: Summer 2023'
 date: 'August 9 2023'
 excerpt: 'For the Summer 2023 semester, I took CS6795 Intro to Cognitive Science. Here is my review for this course.'
 cover_image: '/assets/images/posts/OMSCS/CS6795Poster.jpg'
