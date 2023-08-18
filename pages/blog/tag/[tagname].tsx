@@ -8,6 +8,7 @@ import PostLinkElement from '../../../components/PostLinkElement';
 import { Inter } from "next/font/google";
 import { BLOG_TAGS, sortByDate } from '../../../utils';
 import BackToPostsSection from '../../../components/BackToPostsSection';
+import { getBlogPostsInfoArray } from '../../blog';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -69,24 +70,8 @@ export async function getStaticProps(context: any) {
     // Get files from the posts dir
     const files = fs.readdirSync(path.join('posts'))
 
-    // Get slug and frontmatter from posts
-    var posts = files.map((filename) => {
-        // Create slug
-        const slug = filename.replace('.md', '')
-
-        // Get frontmatter
-        const markdownWithMeta = fs.readFileSync(
-            path.join('posts', filename),
-            'utf-8'
-        )
-
-        const { data: frontmatter } = matter(markdownWithMeta)
-
-        return {
-            slug,
-            frontmatter,
-        }
-    })
+    // New and more efficient implementation for slug and frontmatter getting
+    var posts = getBlogPostsInfoArray(true);
 
     posts = posts.filter(post => {
         const tagsSplit = post.frontmatter.tags === null || post.frontmatter.tags === undefined || post.frontmatter.tags === "" ? [] : post.frontmatter.tags.split(",");
