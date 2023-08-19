@@ -26,7 +26,6 @@ export default function App({ Component, pageProps }: AppProps) {
                     height={200}
                 />
             </div>
-            {/* <img src={"/assets/Logo.svg"} alt={"Charles Goh (伍长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} /> */}
             {
                 routerPaths.map(
                     routerPath => <Link 
