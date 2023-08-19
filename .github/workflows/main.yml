@@ -21,10 +21,13 @@ jobs:
     - name: Change Directory to Correct Directory
       run: |
         cd /home/project-enterprise/portfolioblogv2
+    -name: Archive old log files if they exist
+      run: |
+        if [ -f project_enterprise_log.log ]; then mv -n project_enterprise_log.log project_enterprise_log_$(date +%Y-%m-%d_%H-%M-%S).log; fi
     - name: Install Dependencies, Build Application, Deploy on Port 443
       run: |
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
         npm install
         npm run build
-        npm run start -- -p 443 --force &
+        npm run start -- --p 443 >> project_enterprise_log.log 2>&l &
