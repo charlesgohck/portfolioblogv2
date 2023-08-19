@@ -42,7 +42,7 @@ jobs:
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
         cd /home/project-enterprise/portfolioblogv2
-        pkill -9 node
+        killall -q -9 node || true
     - name: Deploy and start project on Port 443
       run: |
         export NVM_DIR=~/.nvm
