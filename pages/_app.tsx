@@ -9,7 +9,7 @@ import FadeInSection from '../components/FadeInSection';
 import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
-import SplashScreen from './splashscreen';
+import SplashScreen from './SplashScreen';
 
 const LazyMainComponent = dynamic(() => import('./MainComponent'), {
     loading: () => <SplashScreen/>
