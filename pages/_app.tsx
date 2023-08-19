@@ -8,21 +8,25 @@ import { routerPaths } from './../utils';
 import FadeInSection from '../components/FadeInSection';
 import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
-import dynamic from 'next/dynamic';
-import SplashScreen from './SplashScreen';
+import Image from 'next/image'
 
-const LazyMainComponent = dynamic(() => import('./MainComponent'), {
-    loading: () => <SplashScreen/>
-})
-
-export default function App(appProps: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
 
     const router = useRouter();
     const routerPathName = router.pathname;    
 
     return <div className='bgcontainer'>
         <div className='navbar' id="topNavBar">
-            <img src={"/assets/Logo.svg"} alt={"Charles Goh (伍长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} />
+            <div style={{ position: "relative", backgroundColor: "transparent", aspectRatio: "1", height: "90%", marginTop: 'auto', marginBottom: 'auto', marginLeft: '1vh', marginRight: '1vh' }}>
+                <Image
+                    className="faviconlogo"
+                    src="/assets/Logo.svg"
+                    alt="Charles Goh CK Logo"
+                    width={200}
+                    height={200}
+                />
+            </div>
+            {/* <img src={"/assets/Logo.svg"} alt={"Charles Goh (伍长康) Logo"} className="faviconlogo" style={{ paddingLeft: "2vh", paddingRight: "2vh" }} /> */}
             {
                 routerPaths.map(
                     routerPath => <Link 
@@ -33,7 +37,9 @@ export default function App(appProps: AppProps) {
                     href={`${routerPath.path}`}><i className={`${routerPath.iconClass}`} />&nbsp;&nbsp;{routerPath.name}</Link>)
             }
         </div>
-        <LazyMainComponent pageProps={appProps.pageProps} Component={appProps.Component} router={appProps.router}/>
+        <div className="maincomponent">
+            <Component {...pageProps} />
+        </div>
         <footer style={{ display: 'flex', justifyContent: 'center', padding: '5vh' }}>
             <FadeInSection>
                 <a href='https://www.linkedin.com/in/charlesgohck/' target="_blank" rel="noopener noreferrer">
