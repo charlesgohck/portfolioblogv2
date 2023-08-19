@@ -12,9 +12,6 @@ jobs:
     steps:
     - name: Checkout Code v3
       uses: actions/checkout@v3
-    - name: Stop all node processes
-      run: |
-        kilall -9 node
     - name: Delete Existing Folder if Present
       run: |
         rm -rf /home/project-enterprise/portfolioblogv2
@@ -40,6 +37,12 @@ jobs:
         source ~/.nvm/nvm.sh
         cd /home/project-enterprise/portfolioblogv2
         npm run build
+    - name: Stop all node processes
+      run: |
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
+        cd /home/project-enterprise/portfolioblogv2
+        pkill -9 node
     - name: Deploy and start project on Port 443
       run: |
         export NVM_DIR=~/.nvm
