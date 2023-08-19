@@ -24,10 +24,21 @@ jobs:
     - name: Archive old log files if they exist
       run: |
         if [ -f /home/project-enterprise/project_enterprise_log.log ]; then mv -n /home/project-enterprise/project_enterprise_log.log project_enterprise_log_$(date +%Y-%m-%d_%H-%M-%S).log; fi
-    - name: Install Dependencies, Build Application, Deploy on Port 443
+    - name: Install npm packages in project
       run: |
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
+        cd /home/project-enterprise/portfolioblogv2
+        rm -rf /home/project-enterprise/portfolioblogv2/node_modules/
         npm install
+    - name: Build Application
+      run: |
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
         npm run build
-        npm run start -- --p 443 >> /home/project-enterprise/project_enterprise_log.log 2>&l &
+    - name: Deploy and start project on Port 443
+      run: |
+        export NVM_DIR=~/.nvm
+        source ~/.nvm/nvm.sh
+        npm run build
+        npm run start -- -p 443 >> /home/project-enterprise/project_enterprise_log.log 2>&l &
