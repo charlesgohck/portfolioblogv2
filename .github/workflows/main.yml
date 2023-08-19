@@ -42,5 +42,4 @@ jobs:
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
         cd /home/project-enterprise/portfolioblogv2
-        npm run build
-        npm run start -- -p 443 >> /home/project-enterprise/project_enterprise_log.log 2>&l &
+        nohup npm run start -- -p 443 > /home/project-enterprise/project_enterprise_log.log 2>&1 &
