@@ -29,7 +29,6 @@ jobs:
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
         cd /home/project-enterprise/portfolioblogv2
-        rm -rf /home/project-enterprise/portfolioblogv2/node_modules/
         npm install
     - name: Build Application
       run: |
