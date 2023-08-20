@@ -25,6 +25,7 @@ jobs:
       run: |
         if [ -f /home/project-enterprise/project_enterprise_log.log ]; then mv -n /home/project-enterprise/project_enterprise_log.log project_enterprise_log_$(date +%Y-%m-%d_%H-%M-%S).log; fi
     - name: Install npm packages in project
+      timeout-minutes: 30
       run: |
         export NVM_DIR=~/.nvm
         source ~/.nvm/nvm.sh
