@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { routerPaths } from './../utils';
 import FadeInSection from '../components/FadeInSection';
-import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
 import Image from 'next/image'
 
@@ -47,6 +46,5 @@ export default function App({ Component, pageProps }: AppProps) {
                 <i style={{ color: 'darkred' }} className="sectionsubelement linkelement fa-solid fa-at fa-10x" />
             </FadeInSection>    
         </footer>
-        <Analytics />
     </div>
 }
