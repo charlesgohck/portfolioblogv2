@@ -9,10 +9,20 @@ import { Inter } from "next/font/google";
 import { sortByDate } from '../../../utils';
 import BackToPostsSection from '../../../components/BackToPostsSection';
 import { getBlogPostsInfoArray } from '../../blog';
+import { useEffect, useState } from 'react';
+import FauxLoadingElement from '../../FauxLoadingElement';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    }, [])
 
     const title: string = `Charles Goh (伍长康): Blog History for ${year}`;
 
@@ -26,23 +36,27 @@ export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsTyp
             </Head>
             <main>
                 <h1 style={{ textAlign: "center", paddingTop: "5vh" }}>Posts in: {year}</h1>
-                <div className="sectionelement">
-                    {posts.length == 0
-                    ? <p>No content found...</p>
-                    : posts.map(post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
-                            <FadeInSection>
-                                <PostLinkElement
-                                    slug={post.slug}
-                                    title={post.frontmatter.title}
-                                    date={post.frontmatter.date}
-                                    excerpt={post.frontmatter.excerpt}
-                                    imagePath={post.frontmatter.cover_image}
-                                    tags={post.frontmatter.tags}
-                                />
-                            </FadeInSection>
-                        </div>
-                    )}
-                </div>
+                {
+                    isLoading ?
+                    <FauxLoadingElement />
+                    : <div className="sectionelement">
+                        {posts.length == 0
+                        ? <p>No content found...</p>
+                        : posts.map(post => <div style={{ width: "100%" }} key={`${post.slug} Post Link`}>
+                                <FadeInSection>
+                                    <PostLinkElement
+                                        slug={post.slug}
+                                        title={post.frontmatter.title}
+                                        date={post.frontmatter.date}
+                                        excerpt={post.frontmatter.excerpt}
+                                        imagePath={post.frontmatter.cover_image}
+                                        tags={post.frontmatter.tags}
+                                    />
+                                </FadeInSection>
+                            </div>
+                        )}
+                    </div>
+                }
                 <BackToPostsSection />
             </main>
         </>
