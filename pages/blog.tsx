@@ -6,7 +6,6 @@ import { Inter } from "next/font/google"
 import FadeInSection from "../components/FadeInSection";
 import PostLinkElement from "../components/PostLinkElement";
 import BackToPostsSection from "../components/BackToPostsSection";
-import FauxLoadingElement from './FauxLoadingElement';
 import { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
