@@ -15,12 +15,6 @@ export default function BlogFilterByTags({ year, posts }: InferGetStaticPropsTyp
 
     const title: string = `Charles Goh (伍长康): Blog History for ${year}`;
 
-    posts = posts.filter(post => {
-        const postDate: Date = new Date(post.frontmatter.date);
-        const postDateYear: number = postDate.getUTCFullYear();
-        return postDateYear.toString() === year;
-    }).sort(sortByDate);
-
     return (
         <>
             <Head>
@@ -83,6 +77,12 @@ export async function getStaticProps(context: any) {
 
     // More efficient implementation for getting posts
     var posts = getBlogPostsInfoArray(true);
+
+    posts = posts.filter(post => {
+        const postDate: Date = new Date(post.frontmatter.date);
+        const postDateYear: number = postDate.getUTCFullYear();
+        return postDateYear.toString() === year;
+    });
 
     return {
         props: {
