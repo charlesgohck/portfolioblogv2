@@ -81,7 +81,7 @@ export async function getStaticProps(context: any) {
     return {
         props: {
             tagname: tagname,
-            posts: posts.sort(sortByDate),
+            posts: posts
         },
     }
 }
