@@ -6,7 +6,6 @@ import { Inter } from "next/font/google"
 import FadeInSection from "../components/FadeInSection";
 import PostLinkElement from "../components/PostLinkElement";
 import BackToPostsSection from "../components/BackToPostsSection";
-import { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -56,7 +55,7 @@ export async function getStaticProps() {
     }
 }
 
-export function getBlogPostsInfoArray(isSortedByDateDescending: boolean=true) {
+export function getBlogPostsInfoArray(isSortedByDateDescending: boolean=true, filter: (element: any) => boolean=(element: any) => true) {
     // More efficient implementation: Get directory.txt for all post info instead of reading through all blog posts
     const filePathToDirectoryContents = 'pages/blog/directory.txt';
     const data = fs.readFileSync(filePathToDirectoryContents, 'utf-8');
@@ -64,7 +63,7 @@ export function getBlogPostsInfoArray(isSortedByDateDescending: boolean=true) {
     var posts = [];
     for (const blogPostContent of blogPostContents) {
         const blogPostInfo = blogPostContent.replace(/[\r\n]/gm, '').split("|");
-        posts.push({
+        const postElement = {
             slug: blogPostInfo[0],
             frontmatter: {
                 title: blogPostInfo[1],
@@ -73,7 +72,10 @@ export function getBlogPostsInfoArray(isSortedByDateDescending: boolean=true) {
                 cover_image: blogPostInfo[4],
                 tags: blogPostInfo[5]
             }
-        })
+        };
+        if (filter(postElement)) {
+            posts.push(postElement);
+        }
     }
     return isSortedByDateDescending ? posts.sort(sortByDate) : posts;
 }

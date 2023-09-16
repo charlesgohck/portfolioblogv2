@@ -69,14 +69,14 @@ export async function getStaticProps(context: any) {
 
     const year: string = context.params.year;
 
-    // More efficient implementation for getting posts
-    var posts = getBlogPostsInfoArray(true);
-
-    posts = posts.filter(post => {
+    const filterFunction: (element: any) => boolean = post => {
         const postDate: Date = new Date(post.frontmatter.date);
         const postDateYear: number = postDate.getUTCFullYear();
         return postDateYear.toString() === year;
-    });
+    }
+
+    // More efficient implementation for getting posts
+    var posts = getBlogPostsInfoArray(true, filterFunction);
 
     return {
         props: {
