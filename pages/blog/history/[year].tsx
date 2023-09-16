@@ -7,7 +7,6 @@ import PostLinkElement from '../../../components/PostLinkElement';
 import { Inter } from "next/font/google";
 import BackToPostsSection from '../../../components/BackToPostsSection';
 import { getBlogPostsInfoArray } from '../../blog';
-import { sortByDate } from '../../../utils';
 
 const inter = Inter({ subsets: ['latin'] })
 
