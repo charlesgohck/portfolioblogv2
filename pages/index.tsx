@@ -57,7 +57,7 @@ export default function Home() {
                                 </div>
                                 <br/>
                                 <div>
-                                    <h2><i className="fa-solid fa-check" />&nbsp;&nbsp;May 2019 - June 2020</h2>
+                                    <h2><i className="fa-solid fa-check" />&nbsp;&nbsp;August 2016 - June 2020</h2>
                                     <p><strong>Bachelor of Computing (Distinction Honours) in Computer Science</strong></p>
                                     <p><strong>Minor in Management</strong></p>
                                     <p>National University of Singapore, Singapore</p>
