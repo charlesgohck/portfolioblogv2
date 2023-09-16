@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from "path";
-import matter from "gray-matter";
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import FadeInSection from '../../../components/FadeInSection';
@@ -66,9 +63,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
 
     const tagname: string = context.params.tagname;
-
-    // Get files from the posts dir
-    const files = fs.readdirSync(path.join('posts'))
 
     // New and more efficient implementation for slug and frontmatter getting
     var posts = getBlogPostsInfoArray(true);

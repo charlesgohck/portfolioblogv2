@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from "path";
 import { InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 import FadeInSection from '../../../components/FadeInSection';
@@ -70,9 +68,6 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
 
     const year: string = context.params.year;
-
-    // Get files from the posts dir
-    const files = fs.readdirSync(path.join('posts'))
 
     // More efficient implementation for getting posts
     var posts = getBlogPostsInfoArray(true);
